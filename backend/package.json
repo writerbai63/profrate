@@ -1,7 +1,9 @@
 {
-  "name": "profrate-backend",
+  "name": "profrate",
   "version": "1.0.0",
-  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",

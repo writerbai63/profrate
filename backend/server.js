@@ -8,11 +8,10 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 const path = require('path');
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static(path.join(__dirname, 'frontend')));
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
+  res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
-
 // ─── DB CONFIG ──────────────────────────────────────────────────────────────
 const dbConfig = {
   host: process.env.DB_HOST || 'localhost',

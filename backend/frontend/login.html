@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Giriş — ProfRate</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .login-wrap {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+    }
+    .login-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 48px 40px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: var(--shadow-lg);
+    }
+    .login-logo {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .login-sub {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-bottom: 36px;
+    }
+    .login-error {
+      background: rgba(224,94,94,0.1);
+      border: 1px solid rgba(224,94,94,0.3);
+      color: var(--danger);
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 0.875rem;
+      margin-bottom: 16px;
+      display: none;
+    }
+    .login-btn {
+      background: var(--gold);
+      color: #0e0f14;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 13px;
+      border-radius: 10px;
+      width: 100%;
+      margin-top: 8px;
+      transition: all .2s;
+    }
+    .login-btn:hover {
+      background: #f0c85a;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+  <div class="login-wrap">
+    <div class="login-box">
+      <div class="login-logo">🎓 ProfRate</div>
+      <div class="login-sub">Admin panelinə giriş</div>
+
+      <div class="login-error" id="login-error">
+        ❌ İstifadəçi adı və ya şifrə səhvdir!
+      </div>
+
+      <div class="form-row">
+        <label class="form-label">İstifadəçi adı</label>
+        <input class="form-input" id="username" 
+               type="text" placeholder="admin" 
+               autocomplete="username" />
+      </div>
+
+      <div class="form-row">
+        <label class="form-label">Şifrə</label>
+        <input class="form-input" id="password" 
+               type="password" placeholder="••••••••" 
+               autocomplete="current-password" />
+      </div>
+
+      <button class="login-btn" onclick="doLogin()">Daxil ol</button>
+    </div>
+  </div>
+
+  <script>
+    // Artıq girişi varsa admin-ə yönləndir
+    if (sessionStorage.getItem('admin_auth') === 'true') {
+      location.href = 'admin.html';
+    }
+
+    function doLogin() {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const error    = document.getElementById('login-error');
+
+      if (username === 'writerbai' && password === 'huseyn78') {
+        sessionStorage.setItem('admin_auth', 'true');
+        location.href = 'admin.html';
+      } else {
+        error.style.display = 'block';
+        document.getElementById('password').value = '';
+      }
+    }
+
+    // Enter ilə də giriş
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Enter') doLogin();
+    });
+  </script>
+</body>
+</html>

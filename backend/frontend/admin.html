@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel — ProfRate</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<!-- Üzən Sosial Düymələr -->
+<div class="social-float">
+  <a class="social-btn whatsapp" 
+     href="https://wa.me/994997771734" 
+     target="_blank" 
+     title="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <a class="social-btn instagram" 
+     href="https://www.instagram.com/writerbai" 
+     target="_blank" 
+     title="Instagram">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+    </svg>
+  </a>
+</div>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8">
+      <path d="M14 3L2 9l12 6 12-6-12-6z"/><path d="M2 9v8"/><path d="M7 11.5v6a9 9 0 0014 0v-6"/>
+    </svg>
+    ProfRate
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="search.html">Professors</a>
+    <a href="admin.html" class="active">Admin</a>
+  </div>
+  <div class="nav-search-mini">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input id="nav-search-input" type="text" placeholder="Search…" />
+  </div>
+<div style="display:flex;gap:10px;margin-left:auto">
+  <a href="index.html" class="nav-cta" 
+     style="background:var(--surface2);color:var(--text)">
+     ← Sayta qayıt
+  </a>
+  <button class="nav-cta" onclick="logout()" 
+          style="border:none;cursor:pointer">
+    Çıxış 🚪
+  </button>
+</div>
+</nav>
+
+<main class="page admin-page">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="admin-header">
+      <div class="admin-icon">⚙️</div>
+      <div>
+        <div class="admin-title">Admin Panel</div>
+        <div class="admin-sub">Manage professors, subjects, and assignments</div>
+      </div>
+    </div>
+
+    <div class="admin-grid">
+
+      <!-- ADD PROFESSOR -->
+      <div class="admin-panel">
+        <div class="admin-panel-head">
+          <div class="dot dot-gold"></div>
+          Add Professor
+        </div>
+        <div class="admin-panel-body">
+          <div class="form-row">
+            <label class="form-label">Full Name *</label>
+            <input class="form-input" id="p-name" placeholder="Dr. Jane Smith" />
+          </div>
+          <div class="form-row">
+            <label class="form-label">University *</label>
+            <input class="form-input" id="p-university" placeholder="University of Bologna" />
+          </div>
+          <div class="form-row">
+            <label class="form-label">Faculty *</label>
+            <input class="form-input" id="p-faculty" placeholder="Engineering" />
+          </div>
+          <div class="form-row">
+            <label class="form-label">Department *</label>
+            <input class="form-input" id="p-department" placeholder="Computer Science" />
+          </div>
+          <div class="form-row">
+            <label class="form-label">Biography</label>
+            <textarea class="form-input review-input" id="p-bio" placeholder="Short bio…" style="min-height:80px"></textarea>
+          </div>
+          <button class="admin-submit" onclick="addProfessor()">Add Professor</button>
+
+          <div class="admin-list">
+            <div class="admin-list-title">Professors</div>
+            <div id="prof-list"><div class="loading"><div class="spinner"></div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADD SUBJECT -->
+      <div class="admin-panel">
+        <div class="admin-panel-head">
+          <div class="dot dot-blue"></div>
+          Add Subject
+        </div>
+        <div class="admin-panel-body">
+          <div class="form-row">
+            <label class="form-label">Subject Name *</label>
+            <input class="form-input" id="s-name" placeholder="Algorithms & Data Structures" />
+          </div>
+          <div class="form-row">
+            <label class="form-label">Department *</label>
+            <input class="form-input" id="s-department" placeholder="Computer Science" />
+          </div>
+          <button class="admin-submit" onclick="addSubject()">Add Subject</button>
+
+          <div class="admin-list">
+            <div class="admin-list-title">Subjects</div>
+            <div id="sub-list"><div class="loading"><div class="spinner"></div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ASSIGN SUBJECT TO PROFESSOR -->
+      <div class="admin-panel">
+        <div class="admin-panel-head">
+          <div class="dot dot-green"></div>
+          Assign Subject to Professor
+        </div>
+        <div class="admin-panel-body">
+          <div class="form-row">
+            <label class="form-label">Professor *</label>
+            <select class="form-select" id="a-professor">
+              <option value="">Select professor…</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label class="form-label">Subject *</label>
+            <select class="form-select" id="a-subject">
+              <option value="">Select subject…</option>
+            </select>
+          </div>
+          <button class="admin-submit" onclick="assignSubject()">Assign Subject</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container"><p>Built with ❤️ for students · <strong>ProfRate</strong></p></div>
+</footer>
+<script>
+  // Giriş yoxlanışı
+  if (sessionStorage.getItem('admin_auth') !== 'true') {
+    location.href = 'login.html';
+  }
+  function logout() {
+  sessionStorage.removeItem('admin_auth');
+  location.href = 'login.html';
+}
+</script>
+</script>
+<script src="js/shared.js"></script>
+<script>
+let allProfs    = [];
+let allSubjects = [];
+
+async function loadData() {
+  [allProfs, allSubjects] = await Promise.all([api.getProfessors(), api.getSubjects()]);
+  renderProfList();
+  renderSubList();
+  renderSelects();
+}
+
+function renderProfList() {
+  const el = document.getElementById('prof-list');
+  el.innerHTML = allProfs.length
+    ? allProfs.map(p => `
+        <div class="admin-list-item">
+          <div>
+            <div class="name">${p.full_name}</div>
+            <div class="meta">${p.department} · ${p.university}</div>
+          </div>
+          <button class="delete-btn" onclick="deleteProfessor(${p.id})">Delete</button>
+        </div>`).join('')
+    : '<div class="text-muted" style="font-size:.85rem;padding:8px 0">No professors yet</div>';
+}
+
+function renderSubList() {
+  const el = document.getElementById('sub-list');
+  el.innerHTML = allSubjects.length
+    ? allSubjects.map(s => `
+        <div class="admin-list-item">
+          <div>
+            <div class="name">${s.subject_name}</div>
+            <div class="meta">${s.department} · ${s.professor_count} prof${s.professor_count !== 1 ? 's' : ''}</div>
+          </div>
+          <button class="delete-btn" onclick="deleteSubject(${s.id})">Delete</button>
+        </div>`).join('')
+    : '<div class="text-muted" style="font-size:.85rem;padding:8px 0">No subjects yet</div>';
+}
+
+function renderSelects() {
+  const ps = document.getElementById('a-professor');
+  const ss = document.getElementById('a-subject');
+  ps.innerHTML = '<option value="">Select professor…</option>' +
+    allProfs.map(p => `<option value="${p.id}">${p.full_name}</option>`).join('');
+  ss.innerHTML = '<option value="">Select subject…</option>' +
+    allSubjects.map(s => `<option value="${s.id}">${s.subject_name}</option>`).join('');
+}
+
+window.addProfessor = async function() {
+  const body = {
+    full_name:  document.getElementById('p-name').value.trim(),
+    university: document.getElementById('p-university').value.trim(),
+    faculty:    document.getElementById('p-faculty').value.trim(),
+    department: document.getElementById('p-department').value.trim(),
+    biography:  document.getElementById('p-bio').value.trim(),
+  };
+  if (!body.full_name || !body.university || !body.faculty || !body.department) {
+    toast('Please fill all required fields', 'error'); return;
+  }
+  try {
+    await api.postProfessor(body);
+    toast('Professor added!', 'success');
+    ['p-name','p-university','p-faculty','p-department','p-bio'].forEach(id => document.getElementById(id).value = '');
+    await loadData();
+  } catch(e) { toast(e.message, 'error'); }
+};
+
+window.addSubject = async function() {
+  const body = {
+    subject_name: document.getElementById('s-name').value.trim(),
+    department:   document.getElementById('s-department').value.trim(),
+  };
+  if (!body.subject_name || !body.department) {
+    toast('Please fill all required fields', 'error'); return;
+  }
+  try {
+    await api.postSubject(body);
+    toast('Subject added!', 'success');
+    ['s-name','s-department'].forEach(id => document.getElementById(id).value = '');
+    await loadData();
+  } catch(e) { toast(e.message, 'error'); }
+};
+
+window.assignSubject = async function() {
+  const professor_id = document.getElementById('a-professor').value;
+  const subject_id   = document.getElementById('a-subject').value;
+  if (!professor_id || !subject_id) {
+    toast('Select both professor and subject', 'error'); return;
+  }
+  try {
+    await api.assignSubject({ professor_id, subject_id });
+    toast('Subject assigned!', 'success');
+  } catch(e) { toast(e.message, 'error'); }
+};
+
+window.deleteProfessor = async function(id) {
+  if (!confirm('Delete this professor and all their reviews?')) return;
+  try {
+    await api.deleteProfessor(id);
+    toast('Professor deleted', 'success');
+    await loadData();
+  } catch(e) { toast(e.message, 'error'); }
+};
+
+window.deleteSubject = async function(id) {
+  if (!confirm('Delete this subject?')) return;
+  try {
+    await api.deleteSubject(id);
+    toast('Subject deleted', 'success');
+    await loadData();
+  } catch(e) { toast(e.message, 'error'); }
+};
+
+loadData().catch(e => {
+  document.getElementById('prof-list').innerHTML =
+    `<div class="empty"><div class="empty-icon">⚠️</div><div class="empty-text">Cannot connect to API</div></div>`;
+  document.getElementById('sub-list').innerHTML = '';
+});
+</script>
+</body>
+</html>

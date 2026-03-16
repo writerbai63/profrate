@@ -1,6 +1,8 @@
 /* shared.js — utilities shared across all pages */
 
-const API = 'https://profrate-production.up.railway.app';
+const API = 'https://profrate-production.up.railway.app/api';
+```
+
 
 // ── API HELPERS ──────────────────────────────────────────────────────────────
 async function apiFetch(path, opts = {}) {

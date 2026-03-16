@@ -1,6 +1,6 @@
 /* shared.js — utilities shared across all pages */
 
-const API = 'http://localhost:3001/api';
+const API = 'https://profrate-production.up.railway.app/api';
 
 // ── API HELPERS ──────────────────────────────────────────────────────────────
 async function apiFetch(path, opts = {}) {

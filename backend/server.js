@@ -71,11 +71,12 @@ async function initDB() {
     )
   `);
 
-  await conn.query(`
+ await conn.query(`
     CREATE TABLE IF NOT EXISTS reviews (
       id INT AUTO_INCREMENT PRIMARY KEY,
       professor_id INT NOT NULL,
       rating TINYINT NOT NULL CHECK (rating BETWEEN 1 AND 5),
+      reviewer_name VARCHAR(255),
       comment TEXT,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
       FOREIGN KEY (professor_id) REFERENCES professors(id) ON DELETE CASCADE
@@ -408,13 +409,14 @@ app.get('/api/reviews/:professorId', async (req, res) => {
 // POST /api/reviews
 app.post('/api/reviews', async (req, res) => {
   try {
-    const { professor_id, rating, comment } = req.body;
+    const { professor_id, rating, comment, reviewer_name } = req.body;
     if (!professor_id || !rating) return res.status(400).json({ error: 'professor_id and rating required' });
     if (rating < 1 || rating > 5) return res.status(400).json({ error: 'Rating must be 1-5' });
+    if (!reviewer_name) return res.status(400).json({ error: 'Ad və soyad yazın' });
 
     const [result] = await pool.query(
-      'INSERT INTO reviews (professor_id, rating, comment) VALUES (?,?,?)',
-      [professor_id, rating, comment || '']
+      'INSERT INTO reviews (professor_id, rating, comment, reviewer_name) VALUES (?,?,?,?)',
+      [professor_id, rating, comment || '', reviewer_name]
     );
 
     const [avg] = await pool.query(

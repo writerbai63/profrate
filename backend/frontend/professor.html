@@ -260,7 +260,7 @@ ${prof.email ? `
     btn.disabled = false;
     btn.textContent = 'Şərh Yaz';
   }
-};
+
 
         function renderReviews(reviews) {
     if (!reviews.length) return '<div class="empty" style="padding:20px 0"><div class="empty-icon">💬</div><div class="empty-text">Hələ şərh yoxdur. İlk siz yazın!</div></div>';
@@ -275,7 +275,8 @@ ${prof.email ? `
         </div>
         <div class="review-comment">${r.comment || '<em style="opacity:.5">Şərh yazılmayıb</em>'}</div>
       </div>`).join('');
-    });
+  });
+  
   </script>
 </body>
 

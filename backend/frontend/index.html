@@ -1,106 +1,171 @@
 <!DOCTYPE html>
+<!-- Brauzerə deyirik ki, bu müasir HTML5 faylıdır -->
+
 <html lang="en">
+<!-- Səhifənin dili ingilis dili kimi təyin edilir -->
+
 <head>
   <meta charset="UTF-8" />
+  <!-- Xüsusi hərflər düzgün görünsün deyə UTF-8 kodlaşdırması seçirik -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Sayt mobil telefonlarda da normal görünsün deyə bu sətri yazırıq -->
+
   <title>ProfRate — Find & Rate Your Professors</title>
+  <!-- Brauzer tabında görünəcək başlıq -->
+
   <link rel="stylesheet" href="css/styles.css" />
+  <!-- Bütün səhifənin dizaynı üçün xarici CSS faylını bağlayırıq -->
 </head>
+
 <!-- Üzən Sosial Düymələr -->
+<!-- Səhifənin kənarında sabit dayanan WhatsApp və Instagram düymələri -->
 <div class="social-float">
+
   <a class="social-btn whatsapp" 
      href="https://wa.me/994997771734" 
      target="_blank" 
      title="WhatsApp">
+  <!-- WhatsApp düyməsi — klik edəndə yeni tabda WhatsApp nömrəsi açılır -->
+
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
+    <!-- Yuxarıdakı uzun kod WhatsApp-ın rəsmi loqo şəklidir (SVG formatında) -->
   </a>
 
   <a class="social-btn instagram" 
      href="https://www.instagram.com/writerbai" 
      target="_blank" 
      title="Instagram">
+  <!-- Instagram düyməsi — klik edəndə Instagram profilinə keçid edir -->
+
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
     </svg>
+    <!-- Yuxarıdakı uzun kod Instagram-ın rəsmi loqo şəklidir (SVG formatında) -->
   </a>
 </div>
+
 <body>
 
 <!-- NAV -->
+<!-- Yuxarıdakı naviqasiya paneli — saytın hər səhifəsində olan menyu -->
 <nav class="nav">
+
   <a href="index.html" class="nav-logo">
+  <!-- Loqoya klik edəndə ana səhifəyə qayıdır -->
     <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8">
       <path d="M14 3L2 9l12 6 12-6-12-6z"/><path d="M2 9v8"/><path d="M7 11.5v6a9 9 0 0014 0v-6"/>
     </svg>
+    <!-- Yuxarıdakı kod loqonun yanındakı kiçik akademik papaq ikonasıdır -->
     ProfRate
   </a>
+
   <div class="nav-links">
+  <!-- Naviqasiya menyusundakı keçid linkləri -->
     <a href="index.html" class="active">Home</a>
+    <!-- Ana səhifə linki — "active" sinfi göstərir ki, hazırda bu səhifədəyik -->
     <a href="search.html">Professors</a>
-    
+    <!-- Professor axtarış səhifəsinə keçid -->
   </div>
+
   <div class="nav-search-mini">
+  <!-- Naviqasiyada kiçik axtarış qutusu -->
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <!-- Böyüdücü şüşə ikonu -->
     <input id="nav-search-input" type="text" placeholder="Quick search…" />
+    <!-- Sürətli axtarış üçün mətn sahəsi -->
   </div>
-  
+
 </nav>
 
 <!-- HERO -->
+<!-- Səhifənin əsas böyük tanıtım hissəsi -->
 <main class="page">
   <section class="hero">
     <div class="hero-bg"></div>
+    <!-- Arxa fon effekti üçün boş div — dizayn CSS-də idarə olunur -->
     <div class="hero-grid"></div>
+    <!-- Arxa planda görünən şəbəkə (grid) naxışı -->
+
     <div class="hero-content">
+    <!-- Hero hissəsinin əsas mətni və axtarış qutusu -->
+
       <div class="hero-badge">⭐ Student-Driven Reviews</div>
+      <!-- Yuxarıdakı kiçik etiket — "Tələbə rəyləri" mənasını verir -->
+
       <h1>Find the <em>Right</em> Professor<br>for Your Journey</h1>
+      <!-- Böyük başlıq mətni — "Right" sözü kursiv yazılıb ki, vurğulansın -->
+
       <p class="hero-sub">Search professors and subjects, read real student reviews, and make informed decisions about your education.</p>
+      <!-- Başlığın altındakı izah cümləsi -->
 
       <div class="search-wrap">
+      <!-- Axtarış qutusu və açılan nəticə siyahısını əhatə edən konteyner -->
+
         <div class="search-bar" id="hero-search-bar">
+        <!-- Böyük axtarış qutusu -->
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <!-- Böyüdücü şüşə ikonu -->
           <input id="hero-input" type="text" placeholder="Search professors, subjects, departments…" autocomplete="off" />
+          <!-- İstifadəçinin axtarış sözü yazdığı sahə — autocomplete="off" brauzerin öz təkliflərini bağlayır -->
           <button class="search-btn" id="hero-search-btn">Search</button>
+          <!-- Axtarış düyməsi -->
         </div>
+
         <div class="search-dropdown" id="hero-dropdown"></div>
+        <!-- Yazarkən canlı olaraq açılan nəticə siyahısı — JavaScript ilə doldurulur -->
       </div>
     </div>
   </section>
 
   <!-- STATS -->
+  <!-- Saytın ümumi statistikasını göstərən panel -->
   <div class="container">
     <div class="stats-bar" id="stats-bar">
       <div class="stat-item"><div class="stat-num" id="stat-profs">—</div><div class="stat-label">Professors</div></div>
+      <!-- Ümumi professor sayı — JavaScript ilə doldurulur, əvvəlcə "—" görünür -->
       <div class="stat-item"><div class="stat-num" id="stat-subjects">—</div><div class="stat-label">Subjects</div></div>
+      <!-- Ümumi fənn sayı -->
       <div class="stat-item"><div class="stat-num" id="stat-reviews">—</div><div class="stat-label">Student Reviews</div></div>
+      <!-- Ümumi tələbə rəyi sayı -->
       <div class="stat-item"><div class="stat-num" id="stat-depts">—</div><div class="stat-label">Departments</div></div>
+      <!-- Ümumi kafedra sayı -->
     </div>
   </div>
 
   <!-- TOP RATED -->
+  <!-- Ən yüksək reytinqli professorların bölməsi -->
   <section class="section">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">⭐ Top <span>Rated</span></h2>
+        <!-- Bölmənin başlığı -->
         <a href="search.html" class="section-link">View all →</a>
+        <!-- Bütün professorlara keçid linki -->
       </div>
       <div class="cards-grid" id="top-grid">
         <div class="loading"><div class="spinner"></div><span>Loading…</span></div>
+        <!-- Məlumatlar yüklənənə qədər fırlanan animasiya görünür -->
       </div>
     </div>
   </section>
 
   <!-- RECENTLY ADDED -->
+  <!-- Ən son əlavə edilmiş professorların bölməsi -->
   <section class="section" style="padding-top:0">
+  <!-- Bu bölmənin yuxarı boşluğunu sıfırlayırıq ki, üst bölməyə çox yaxın olmasın -->
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">🕐 Recently <span>Added</span></h2>
+        <!-- Bölmənin başlığı -->
         <a href="search.html" class="section-link">View all →</a>
+        <!-- Bütün professorlara keçid linki -->
       </div>
       <div class="cards-grid" id="recent-grid">
         <div class="loading"><div class="spinner"></div><span>Loading…</span></div>
+        <!-- Məlumatlar yüklənənə qədər fırlanan animasiya -->
       </div>
     </div>
   </section>
@@ -108,108 +173,154 @@
   <footer>
     <div class="container">
       <p>Built with ❤️ for students · <strong>ProfRate</strong></p>
+      <!-- Səhifənin ən aşağısındakı footer yazısı -->
     </div>
   </footer>
 </main>
 
 <script src="js/shared.js"></script>
+<!-- Bütün səhifələrdə ortaq istifadə olunan JavaScript funksiyalarını bağlayırıq -->
+
 <script>
 (async function() {
-  // Load top & recent professors
+  // Səhifə açılarkən dərhal işə düşən funksiya — bütün məlumatları yükləyir
+
   try {
     const [top, recent, profs, subjects] = await Promise.all([
-      api.getTopProfs(),
-      api.getRecentProfs(),
-      api.getProfessors(),
-      api.getSubjects(),
+      api.getTopProfs(),    // Ən yüksək reytinqli professorları gətirir
+      api.getRecentProfs(), // Ən son əlavə edilmiş professorları gətirir
+      api.getProfessors(),  // Bütün professorları gətirir (statistika üçün)
+      api.getSubjects(),    // Bütün fənnləri gətirir (statistika üçün)
     ]);
+    // Yuxarıdakı dörd sorğu eyni vaxtda göndərilir, hamısı bitəndə davam edir
 
     document.getElementById('top-grid').innerHTML = top.length
       ? top.map(profCardHTML).join('')
+      // Hər professor üçün kart HTML-i yaradır və siyahıya əlavə edir
       : '<div class="empty"><div class="empty-icon">🎓</div><div class="empty-text">No professors yet</div></div>';
+      // Əgər professor yoxdursa, boş vəziyyət mesajı göstərilir
 
     document.getElementById('recent-grid').innerHTML = recent.length
       ? recent.map(profCardHTML).join('')
+      // Son əlavə edilmiş professorlar üçün eyni əməliyyat
       : '<div class="empty"><div class="empty-icon">🎓</div><div class="empty-text">No professors yet</div></div>';
 
-    // Stats
+    // Stats — statistika rəqəmlərini hesablayıb ekrana yazırıq
     const totalReviews = profs.reduce((s, p) => s + (Number(p.review_count)||0), 0);
+    // Bütün professorların rəylərinin sayını toplayırıq
     const depts = new Set(profs.map(p => p.department)).size;
+    // Unikal kafedraların sayını tapırıq (Set təkrarları silir)
+
     document.getElementById('stat-profs').textContent    = profs.length;
+    // Professor sayını ekrana yazırıq
     document.getElementById('stat-subjects').textContent = subjects.length;
+    // Fənn sayını ekrana yazırıq
     document.getElementById('stat-reviews').textContent  = totalReviews;
+    // Ümumi rəy sayını ekrana yazırıq
     document.getElementById('stat-depts').textContent    = depts;
+    // Kafedra sayını ekrana yazırıq
+
   } catch(e) {
     console.error(e);
     document.getElementById('top-grid').innerHTML =
       '<div class="empty"><div class="empty-icon">⚠️</div><div class="empty-text">Could not connect to API server.<br>Make sure the backend is running on port 3001.</div></div>';
+    // Server ilə əlaqə qurulmazsa, xəta mesajı göstərilir
     document.getElementById('recent-grid').innerHTML = '';
+    // Son əlavə edilmiş professorlar bölməsi boş buraxılır
   }
 
   // ── LIVE SEARCH DROPDOWN ────────────────────────────────────────────────
+  // Yazarkən canlı olaraq açılan axtarış nəticələri
+
   const input    = document.getElementById('hero-input');
+  // Axtarış yazı sahəsini tapırıq
   const dropdown = document.getElementById('hero-dropdown');
+  // Açılan nəticə siyahısı elementini tapırıq
   const btn      = document.getElementById('hero-search-btn');
+  // Axtarış düyməsini tapırıq
   let debounceTimer;
+  // Hər hərfdə serverə sorğu getməsin deyə gözləmə taymeri
 
   function buildDropdown(data, q) {
+  // Axtarış nəticələrindən açılan siyahı qurur
     const { professors, subjects, profsBySubject } = data;
     let html = '';
 
     if (professors.length) {
       html += `<div class="search-section-title">Professors</div>`;
+      // Nəticədə professor varsa, "Professors" başlığı əlavə edirik
       html += professors.slice(0, 4).map(p => `
         <div class="search-item" onclick="goToProf(${p.id})">
+        <!-- Üstünə klik edəndə həmin professorun səhifəsinə keçir -->
           <div class="search-item-icon">👤</div>
           <div>
             <div class="search-item-name">${p.full_name}</div>
+            <!-- Professorun adı -->
             <div class="search-item-meta">${p.department} · <span class="search-stars">${starsHTML(p.avg_rating)}</span> ${Number(p.avg_rating).toFixed(1)}</div>
+            <!-- Kafedra, ulduz reytinqi və rəqəmsal bal -->
           </div>
         </div>`).join('');
+        // Maksimum 4 professor göstəririk
     }
 
     if (subjects.length) {
       html += `<div class="search-section-title">Subjects</div>`;
+      // Nəticədə fənn varsa, "Subjects" başlığı əlavə edirik
       html += subjects.slice(0, 3).map(s => `
         <div class="search-item" onclick="goToSubject(${s.id})">
+        <!-- Üstünə klik edəndə həmin fənnin səhifəsinə keçir -->
           <div class="search-item-icon">📚</div>
           <div>
             <div class="search-item-name">${s.subject_name}</div>
+            <!-- Fənnin adı -->
             <div class="search-item-meta">${s.department} · ${s.professor_count} professor${s.professor_count !== 1 ? 's' : ''}</div>
+            <!-- Kafedra və neçə professorun bu fənni tədris etdiyi -->
           </div>
         </div>`).join('');
+        // Maksimum 3 fənn göstəririk
     }
 
     if (!professors.length && !subjects.length) {
       html = `<div class="search-no-results">No results for "<strong>${q}</strong>"</div>`;
+      // Heç nəticə yoxdursa, "tapılmadı" mesajı göstəririk
     }
 
     dropdown.innerHTML = html;
     dropdown.classList.add('show');
+    // Açılan siyahını görünən edirik
   }
 
   input.addEventListener('input', () => {
+  // İstifadəçi hər hərfi yazdıqda bu işə düşür
     clearTimeout(debounceTimer);
     const q = input.value.trim();
     if (q.length < 2) { dropdown.classList.remove('show'); return; }
+    // 2 hərfdən az yazılıbsa, axtarış etmirik
+
     debounceTimer = setTimeout(async () => {
+    // Son hərfdən 220ms sonra axtarış edir — hər hərfdə sorğu getməsin deyə
       try {
         const data = await api.search(q);
         buildDropdown(data, q);
+        // Nəticələri açılan siyahıda göstərir
       } catch {}
     }, 220);
   });
 
   btn.addEventListener('click', () => {
+  // Axtarış düyməsinə basılanda
     const q = input.value.trim();
     if (q) goToSearch(q);
+    // Axtarış səhifəsinə yönləndirir
   });
 
   input.addEventListener('keydown', e => {
+  // İstifadəçi Enter düyməsinə bassanda da axtarış işə düşür
     if (e.key === 'Enter' && input.value.trim()) goToSearch(input.value.trim());
   });
 
   document.addEventListener('click', e => {
+  // Axtarış qutusunun xaricinə klik edəndə açılan siyahı bağlanır
     if (!e.target.closest('#hero-search-bar') && !e.target.closest('#hero-dropdown')) {
       dropdown.classList.remove('show');
     }

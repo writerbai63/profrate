@@ -1,82 +1,141 @@
 <!DOCTYPE html>
+<!-- Brauzerə deyirik ki, bu müasir HTML5 faylıdır -->
+
 <html lang="en">
+<!-- Səhifənin dili ingilis dili kimi təyin edilir -->
+
 <head>
   <meta charset="UTF-8" />
+  <!-- Xüsusi hərflər düzgün görünsün deyə UTF-8 kodlaşdırması seçirik -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Sayt mobil telefonlarda da normal görünsün deyə bu sətri yazırıq -->
+
   <title>Admin Giriş — ProfRate</title>
+  <!-- Brauzer tabında görünəcək başlıq -->
+
   <link rel="stylesheet" href="css/styles.css" />
+  <!-- Ümumi dizayn faylını bağlayırıq -->
+
   <style>
+    /* Aşağıdakı stillər yalnız bu login səhifəsinə aiddir */
+
     .login-wrap {
       min-height: 100vh;
+      /* Səhifənin hündürlüyü ekranın tam hündürlüyü qədər olsun */
       display: flex;
       align-items: center;
       justify-content: center;
+      /* Login qutusunu ekranın tam ortasına yerləşdiririk */
       background: var(--bg);
+      /* Arxa fon rəngi CSS dəyişənindən götürülür */
     }
+
     .login-box {
       background: var(--surface);
+      /* Qutu arxa fon rəngi */
       border: 1px solid var(--border);
+      /* Qutunun kənar xətti */
       border-radius: 20px;
+      /* Küncləri yumşaldırıq */
       padding: 48px 40px;
+      /* Qutu içindən boşluq — yuxarı/aşağı 48px, sağ/sol 40px */
       width: 100%;
       max-width: 400px;
+      /* Maksimum eni 400px — daha geniş olmur */
       box-shadow: var(--shadow-lg);
+      /* Qutunun altında kölgə effekti */
     }
+
     .login-logo {
       font-family: var(--font-display);
+      /* Xüsusi loqo şrifti */
       font-size: 1.6rem;
+      /* Mətnin ölçüsü */
       color: var(--gold);
+      /* Qızılı rəng */
       text-align: center;
+      /* Mərkəzə hizalanır */
       margin-bottom: 8px;
+      /* Altında 8px boşluq */
     }
+
     .login-sub {
       text-align: center;
       color: var(--text-muted);
+      /* Solğun/boz rəng */
       font-size: 0.875rem;
+      /* Kiçik mətn ölçüsü */
       margin-bottom: 36px;
+      /* Altında 36px boşluq */
     }
+
     .login-error {
       background: rgba(224,94,94,0.1);
+      /* Açıq qırmızı arxa fon — xəta mesajı üçün */
       border: 1px solid rgba(224,94,94,0.3);
+      /* Qırmızı kənar xətt */
       color: var(--danger);
+      /* Qırmızı mətn rəngi */
       border-radius: 10px;
       padding: 10px 16px;
       font-size: 0.875rem;
       margin-bottom: 16px;
       display: none;
+      /* Əvvəlcə gizlidirlər — yanlış şifrə daxil edildikdə görünür */
     }
+
     .login-btn {
       background: var(--gold);
+      /* Qızılı arxa fon */
       color: #0e0f14;
+      /* Tünd mətn rəngi ki, qızılı fonda oxunabilsin */
       font-weight: 700;
+      /* Qalın mətn */
       font-size: 1rem;
       padding: 13px;
       border-radius: 10px;
       width: 100%;
+      /* Düymə qutunun tam enini tutur */
       margin-top: 8px;
       transition: all .2s;
+      /* Hover effekti üçün hamar keçid — 0.2 saniyə */
     }
+
     .login-btn:hover {
       background: #f0c85a;
+      /* Üstünə gəldikdə rəng bir az açılır */
       transform: translateY(-1px);
+      /* Üstünə gəldikdə düymə 1px yuxarı qalxır — vizual effekt */
     }
   </style>
 </head>
+
 <body>
   <div class="login-wrap">
+  <!-- Hər şeyi ekranın ortasında saxlayan əsas konteyner -->
+
     <div class="login-box">
+    <!-- Login formu olan ağ/tünd qutu -->
+
       <div class="login-logo">🎓 ProfRate</div>
+      <!-- Saytın loqosu — qızılı rəngli böyük mətn -->
+
       <div class="login-sub">Admin panelinə giriş</div>
+      <!-- Loqonun altındakı kiçik izah mətni -->
 
       <div class="login-error" id="login-error">
         ❌ İstifadəçi adı və ya şifrə səhvdir!
       </div>
+      <!-- Yanlış məlumat daxil edildikdə görünən xəta mesajı — əvvəlcə gizlidir -->
 
       <div class="form-row">
         <label class="form-label">İstifadəçi adı</label>
+        <!-- Input sahəsinin üstündəki etiket -->
         <input class="form-input" id="username" 
                type="text" placeholder="admin" 
                autocomplete="username" />
+        <!-- İstifadəçi adını yazmaq üçün sahə — autocomplete brauzerə öncəki girişləri təklif etməyə icazə verir -->
       </div>
 
       <div class="form-row">
@@ -84,14 +143,16 @@
         <input class="form-input" id="password" 
                type="password" placeholder="••••••••" 
                autocomplete="current-password" />
+        <!-- Şifrə sahəsi — type="password" yazılanları nöqtə ilə gizlədir -->
       </div>
 
       <button class="login-btn" onclick="doLogin()">Daxil ol</button>
+      <!-- Giriş düyməsi — klik edəndə doLogin() funksiyasını işə salır -->
     </div>
   </div>
 
   <script>
-    // Artıq girişi varsa admin-ə yönləndir
+    // Əgər istifadəçi artıq giriş edibsə, birbaşa admin səhifəsinə yönləndirir
     if (sessionStorage.getItem('admin_auth') === 'true') {
       location.href = 'admin.html';
     }
@@ -99,18 +160,25 @@
     function doLogin() {
       const username = document.getElementById('username').value.trim();
       const password = document.getElementById('password').value.trim();
+      // Daxil edilmiş istifadəçi adı və şifrəni götürürük
       const error    = document.getElementById('login-error');
+      // Xəta mesajı elementini tapırıq
 
       if (username === 'writerbai' && password === 'huseyn78') {
+        // Əgər istifadəçi adı və şifrə düzgündürsə
         sessionStorage.setItem('admin_auth', 'true');
+        // Sessiyaya "giriş edilib" qeydi yazırıq
         location.href = 'admin.html';
+        // Admin səhifəsinə yönləndiririk
       } else {
         error.style.display = 'block';
+        // Xəta mesajını görünən edirik
         document.getElementById('password').value = '';
+        // Yanlış şifrəni sahədən silir ki, yenidən yazsın
       }
     }
 
-    // Enter ilə də giriş
+    // Enter düyməsinə basılanda da giriş işə düşür — düyməni axtarmağa ehtiyac yoxdur
     document.addEventListener('keydown', e => {
       if (e.key === 'Enter') doLogin();
     });

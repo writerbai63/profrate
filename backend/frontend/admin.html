@@ -1,155 +1,245 @@
 <!DOCTYPE html>
+<!-- Brauzerə deyirik ki, bu müasir HTML5 faylıdır -->
+
 <html lang="en">
+<!-- Səhifənin dili ingilis dili olaraq təyin edilir -->
+
 <head>
   <meta charset="UTF-8" />
+  <!-- Azərbaycan hərfləri də düzgün görünsün deyə UTF-8 kodlaşdırması seçirik -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Sayt mobil cihazlarda da normal görünsün deyə bu sətri yazırıq -->
+
   <title>Admin Panel — ProfRate</title>
+  <!-- Brauzer tabında görünəcək başlıq -->
+
   <link rel="stylesheet" href="css/styles.css" />
+  <!-- Bütün səhifənin dizaynı üçün xarici CSS faylını bağlayırıq -->
 </head>
+
 <!-- Üzən Sosial Düymələr -->
+<!-- Səhifənin kənarında sabit dayanan WhatsApp və Instagram düymələri -->
 <div class="social-float">
+
   <a class="social-btn whatsapp" 
      href="https://wa.me/994997771734" 
      target="_blank" 
      title="WhatsApp">
+  <!-- WhatsApp düyməsi — üstünə klik edəndə yeni tabda WhatsApp açılır -->
+
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
+    <!-- Yuxarıdakı uzun kod WhatsApp-ın rəsmi loqo şəklidir (SVG formatında) -->
   </a>
 
   <a class="social-btn instagram" 
      href="https://www.instagram.com/writerbai" 
      target="_blank" 
      title="Instagram">
+  <!-- Instagram düyməsi — klik edəndə Instagram profilinə keçid edir -->
+
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
     </svg>
+    <!-- Yuxarıdakı uzun kod Instagram-ın rəsmi loqo şəklidir (SVG formatında) -->
   </a>
 </div>
+
 <body>
 
 <nav class="nav">
+<!-- Yuxarıdakı naviqasiya paneli — saytın hər səhifəsinde olan menyu -->
+
   <a href="index.html" class="nav-logo">
+  <!-- Sola klik edəndə ana səhifəyə qaytarır, bu ProfRate loqosudur -->
+
     <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8">
       <path d="M14 3L2 9l12 6 12-6-12-6z"/><path d="M2 9v8"/><path d="M7 11.5v6a9 9 0 0014 0v-6"/>
     </svg>
+    <!-- Yuxarıdakı kod loqonun yanındakı kiçik akademik papaq ikonasıdır -->
     ProfRate
   </a>
+
   <div class="nav-links">
+  <!-- Naviqasiya menyusundakı linklər -->
     <a href="index.html">Home</a>
+    <!-- Ana səhifəyə keçid -->
     <a href="search.html">Professors</a>
+    <!-- Professor axtarış səhifəsinə keçid -->
     <a href="admin.html" class="active">Admin</a>
+    <!-- Admin səhifəsi — "active" sinfi göstərir ki, hal-hazırda bu səhifədəyik -->
   </div>
+
   <div class="nav-search-mini">
+  <!-- Naviqasiyada kiçik axtarış qutusu -->
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <!-- Yuxarıdakı kod kiçik böyüdücü şüşə ikonasıdır -->
     <input id="nav-search-input" type="text" placeholder="Search…" />
+    <!-- İstifadəçinin axtarış üçün mətn yaza biləcəyi sahə -->
   </div>
-<div style="display:flex;gap:10px;margin-left:auto">
-  <a href="index.html" class="nav-cta" 
-     style="background:var(--surface2);color:var(--text)">
-     ← Sayta qayıt
-  </a>
-  <button class="nav-cta" onclick="logout()" 
-          style="border:none;cursor:pointer">
-    Çıxış 🚪
-  </button>
-</div>
+
+  <div style="display:flex;gap:10px;margin-left:auto">
+  <!-- Sağ tərəfdə yan-yana düzülmüş iki düymə -->
+
+    <a href="index.html" class="nav-cta" 
+       style="background:var(--surface2);color:var(--text)">
+       ← Sayta qayıt
+    </a>
+    <!-- Ana səhifəyə qayıtmaq üçün düymə -->
+
+    <button class="nav-cta" onclick="logout()" 
+            style="border:none;cursor:pointer">
+      Çıxış 🚪
+    </button>
+    <!-- Çıxış düyməsi — klik edəndə aşağıdakı logout() funksiyasını işə salır -->
+  </div>
 </nav>
 
 <main class="page admin-page">
+<!-- Səhifənin əsas məzmun hissəsi -->
+
   <div class="container">
 
     <!-- Header -->
     <div class="admin-header">
+    <!-- Admin panelinin yuxarı başlıq hissəsi -->
       <div class="admin-icon">⚙️</div>
+      <!-- Vizual olaraq dişli çarx ikonu -->
       <div>
         <div class="admin-title">Admin Panel</div>
+        <!-- Böyük başlıq mətni -->
         <div class="admin-sub">Manage professors, subjects, and assignments</div>
+        <!-- Başlığın altındakı kiçik izah mətni -->
       </div>
     </div>
 
     <div class="admin-grid">
+    <!-- Üç paneli yan-yana göstərən grid (şəbəkə) düzümü -->
 
       <!-- ADD PROFESSOR -->
       <div class="admin-panel">
+      <!-- Professor əlavə etmək üçün sol panel -->
+
         <div class="admin-panel-head">
           <div class="dot dot-gold"></div>
+          <!-- Qızılı rəngli kiçik nöqtə — vizual işarə -->
           Add Professor
         </div>
+
         <div class="admin-panel-body">
+
           <div class="form-row">
             <label class="form-label">Full Name *</label>
+            <!-- "Full Name" yazısı — ulduz (*) mütləq doldurulmalı olduğunu bildirir -->
             <input class="form-input" id="p-name" placeholder="Dr. Jane Smith" />
+            <!-- Professorun adını yazmaq üçün input sahəsi -->
           </div>
+
           <div class="form-row">
             <label class="form-label">University *</label>
             <input class="form-input" id="p-university" placeholder="University of Bologna" />
+            <!-- Professorun işlədiyi universiteti yazmaq üçün sahə -->
           </div>
+
           <div class="form-row">
             <label class="form-label">Faculty *</label>
             <input class="form-input" id="p-faculty" placeholder="Engineering" />
+            <!-- Professorun hansı fakültədə olduğunu yazmaq üçün sahə -->
           </div>
+
           <div class="form-row">
             <label class="form-label">Department *</label>
             <input class="form-input" id="p-department" placeholder="Computer Science" />
+            <!-- Professorun kafedrası üçün sahə -->
           </div>
+
           <div class="form-row">
             <label class="form-label">Biography</label>
             <textarea class="form-input review-input" id="p-bio" placeholder="Short bio…" style="min-height:80px"></textarea>
+            <!-- Haqqında qısa məlumat yazmaq üçün çox sətirli mətn sahəsi -->
           </div>
+
           <button class="admin-submit" onclick="addProfessor()">Add Professor</button>
+          <!-- Bu düyməyə basanda addProfessor() funksiyası işə düşür və professor əlavə olunur -->
 
           <div class="admin-list">
             <div class="admin-list-title">Professors</div>
+            <!-- Mövcud professorların siyahısının başlığı -->
             <div id="prof-list"><div class="loading"><div class="spinner"></div></div></div>
+            <!-- Məlumatlar yüklənənə qədər burada fırlanan yükləmə animasiyası görünür -->
           </div>
         </div>
       </div>
 
       <!-- ADD SUBJECT -->
       <div class="admin-panel">
+      <!-- Fənn əlavə etmək üçün orta panel -->
+
         <div class="admin-panel-head">
           <div class="dot dot-blue"></div>
+          <!-- Mavi rəngli kiçik nöqtə -->
           Add Subject
         </div>
+
         <div class="admin-panel-body">
+
           <div class="form-row">
             <label class="form-label">Subject Name *</label>
             <input class="form-input" id="s-name" placeholder="Algorithms & Data Structures" />
+            <!-- Fənnin adını yazmaq üçün sahə -->
           </div>
+
           <div class="form-row">
             <label class="form-label">Department *</label>
             <input class="form-input" id="s-department" placeholder="Computer Science" />
+            <!-- Fənnin aid olduğu kafedrası -->
           </div>
+
           <button class="admin-submit" onclick="addSubject()">Add Subject</button>
+          <!-- Bu düyməyə basanda addSubject() funksiyası işə düşür və fənn əlavə olunur -->
 
           <div class="admin-list">
             <div class="admin-list-title">Subjects</div>
+            <!-- Mövcud fənnlərin siyahısının başlığı -->
             <div id="sub-list"><div class="loading"><div class="spinner"></div></div></div>
+            <!-- Fənnlər yüklənənə qədər fırlanan animasiya göstərilir -->
           </div>
         </div>
       </div>
 
       <!-- ASSIGN SUBJECT TO PROFESSOR -->
       <div class="admin-panel">
+      <!-- Professora fənn təyin etmək üçün sağ panel -->
+
         <div class="admin-panel-head">
           <div class="dot dot-green"></div>
+          <!-- Yaşıl rəngli kiçik nöqtə -->
           Assign Subject to Professor
         </div>
+
         <div class="admin-panel-body">
+
           <div class="form-row">
             <label class="form-label">Professor *</label>
             <select class="form-select" id="a-professor">
               <option value="">Select professor…</option>
+              <!-- Açılan siyahıdan professor seçilir, seçimlər JavaScript ilə doldurulur -->
             </select>
           </div>
+
           <div class="form-row">
             <label class="form-label">Subject *</label>
             <select class="form-select" id="a-subject">
               <option value="">Select subject…</option>
+              <!-- Açılan siyahıdan fənn seçilir, seçimlər JavaScript ilə doldurulur -->
             </select>
           </div>
+
           <button class="admin-submit" onclick="assignSubject()">Assign Subject</button>
+          <!-- Bu düyməyə basanda assignSubject() işə düşür və fənn professora təyin edilir -->
+
         </div>
       </div>
 
@@ -159,68 +249,96 @@
 
 <footer>
   <div class="container"><p>Built with ❤️ for students · <strong>ProfRate</strong></p></div>
+  <!-- Səhifənin ən aşağısındakı footer yazısı -->
 </footer>
+
 <script>
-  // Giriş yoxlanışı
+  // Səhifə açılarkən istifadəçinin admin olaraq giriş edib-etmədiyini yoxlayırıq
   if (sessionStorage.getItem('admin_auth') !== 'true') {
     location.href = 'login.html';
+    // Əgər giriş edilməyibsə, birbaşa login səhifəsinə yönləndiririk
   }
+
   function logout() {
-  sessionStorage.removeItem('admin_auth');
-  location.href = 'login.html';
-}
+    sessionStorage.removeItem('admin_auth');
+    // Admin sessiyasını silir ki, bir daha giriş tələb olunsun
+    location.href = 'login.html';
+    // İstifadəçini login səhifəsinə yönləndirir
+  }
 </script>
-</script>
+
 <script src="js/shared.js"></script>
+<!-- Bütün səhifələrdə ortaq istifadə edilən JavaScript funksiyalarını bağlayırıq (api, toast və s.) -->
+
 <script>
 let allProfs    = [];
 let allSubjects = [];
+// Bütün professorları və fənnləri saxlamaq üçün boş massivlər yaradırıq
 
 async function loadData() {
+  // Serverdən eyni vaxtda həm professorları, həm də fənnləri yükləyirik
   [allProfs, allSubjects] = await Promise.all([api.getProfessors(), api.getSubjects()]);
-  renderProfList();
-  renderSubList();
-  renderSelects();
+  renderProfList();   // Professor siyahısını ekrana çəkirik
+  renderSubList();    // Fənn siyahısını ekrana çəkirik
+  renderSelects();    // Açılan siyahıları (select) doldururuq
 }
 
 function renderProfList() {
   const el = document.getElementById('prof-list');
+  // HTML-dəki professor siyahısı elementini tapırıq
+
   el.innerHTML = allProfs.length
     ? allProfs.map(p => `
         <div class="admin-list-item">
           <div>
             <div class="name">${p.full_name}</div>
+            <!-- Professorun tam adı -->
             <div class="meta">${p.department} · ${p.university}</div>
+            <!-- Kafedra və universitet məlumatı -->
           </div>
           <button class="delete-btn" onclick="deleteProfessor(${p.id})">Delete</button>
+          <!-- Silmə düyməsi — hər professorun yanında ayrıca olur -->
         </div>`).join('')
     : '<div class="text-muted" style="font-size:.85rem;padding:8px 0">No professors yet</div>';
+    // Əgər heç professor yoxdursa, bu mətn göstərilir
 }
 
 function renderSubList() {
   const el = document.getElementById('sub-list');
+  // HTML-dəki fənn siyahısı elementini tapırıq
+
   el.innerHTML = allSubjects.length
     ? allSubjects.map(s => `
         <div class="admin-list-item">
           <div>
             <div class="name">${s.subject_name}</div>
+            <!-- Fənnin adı -->
             <div class="meta">${s.department} · ${s.professor_count} prof${s.professor_count !== 1 ? 's' : ''}</div>
+            <!-- Kafedra və neçə professorun bu fənni tədris etdiyi -->
           </div>
           <button class="delete-btn" onclick="deleteSubject(${s.id})">Delete</button>
+          <!-- Fənni silmək üçün düymə -->
         </div>`).join('')
     : '<div class="text-muted" style="font-size:.85rem;padding:8px 0">No subjects yet</div>';
+    // Əgər heç fənn yoxdursa, bu mətn göstərilir
 }
 
 function renderSelects() {
   const ps = document.getElementById('a-professor');
   const ss = document.getElementById('a-subject');
+  // "Assign" panelindəki açılan siyahı elementlərini tapırıq
+
   ps.innerHTML = '<option value="">Select professor…</option>' +
     allProfs.map(p => `<option value="${p.id}">${p.full_name}</option>`).join('');
+  // Professor siyahısını açılan menüya əlavə edirik
+
   ss.innerHTML = '<option value="">Select subject…</option>' +
     allSubjects.map(s => `<option value="${s.id}">${s.subject_name}</option>`).join('');
+  // Fənn siyahısını açılan menüya əlavə edirik
 }
 
 window.addProfessor = async function() {
+  // İstifadəçinin doldurduğu formdakı məlumatları oxuyuruq
   const body = {
     full_name:  document.getElementById('p-name').value.trim(),
     university: document.getElementById('p-university').value.trim(),
@@ -228,67 +346,99 @@ window.addProfessor = async function() {
     department: document.getElementById('p-department').value.trim(),
     biography:  document.getElementById('p-bio').value.trim(),
   };
+
   if (!body.full_name || !body.university || !body.faculty || !body.department) {
     toast('Please fill all required fields', 'error'); return;
+    // Məcburi sahələr boşdursa, xəta mesajı göstəririk və dayandırırıq
   }
+
   try {
     await api.postProfessor(body);
+    // Məlumatları serverə göndəririk
     toast('Professor added!', 'success');
+    // Uğurlu olduqda yaşıl bildiriş göstəririk
     ['p-name','p-university','p-faculty','p-department','p-bio'].forEach(id => document.getElementById(id).value = '');
+    // Formu təmizləyirik ki, növbəti professor üçün hazır olsun
     await loadData();
+    // Siyahını yeniləyirik
   } catch(e) { toast(e.message, 'error'); }
+  // Xəta olarsa, xəta mesajını ekranda göstəririk
 };
 
 window.addSubject = async function() {
+  // İstifadəçinin doldurduğu fənn formu məlumatlarını oxuyuruq
   const body = {
     subject_name: document.getElementById('s-name').value.trim(),
     department:   document.getElementById('s-department').value.trim(),
   };
+
   if (!body.subject_name || !body.department) {
     toast('Please fill all required fields', 'error'); return;
+    // Sahələr boşdursa, xəta göstəririk
   }
+
   try {
     await api.postSubject(body);
+    // Fənni serverə əlavə edirik
     toast('Subject added!', 'success');
+    // Uğurlu olduqda bildiriş göstəririk
     ['s-name','s-department'].forEach(id => document.getElementById(id).value = '');
+    // Formu sıfırlayırıq
     await loadData();
+    // Siyahını yeniləyirik
   } catch(e) { toast(e.message, 'error'); }
 };
 
 window.assignSubject = async function() {
   const professor_id = document.getElementById('a-professor').value;
   const subject_id   = document.getElementById('a-subject').value;
+  // Seçilmiş professorun və fənnin ID-lərini götürürük
+
   if (!professor_id || !subject_id) {
     toast('Select both professor and subject', 'error'); return;
+    // Hər ikisi seçilməyibsə, xəta göstəririk
   }
+
   try {
     await api.assignSubject({ professor_id, subject_id });
+    // Serverə göndəririk ki, bu fənni həmin professora təyin etsin
     toast('Subject assigned!', 'success');
+    // Uğurlu olduqda bildiriş göstəririk
   } catch(e) { toast(e.message, 'error'); }
 };
 
 window.deleteProfessor = async function(id) {
   if (!confirm('Delete this professor and all their reviews?')) return;
+  // İstifadəçidən təsdiq istəyirik — "əminsiniz?" tipli dialoq
+
   try {
     await api.deleteProfessor(id);
+    // Həmin ID-li professoru serverdən silir
     toast('Professor deleted', 'success');
     await loadData();
+    // Siyahını yeniləyirik
   } catch(e) { toast(e.message, 'error'); }
 };
 
 window.deleteSubject = async function(id) {
   if (!confirm('Delete this subject?')) return;
+  // Fənni silmədən əvvəl istifadəçidən təsdiq alırıq
+
   try {
     await api.deleteSubject(id);
+    // Həmin fənni serverdən silir
     toast('Subject deleted', 'success');
     await loadData();
+    // Siyahını yeniləyirik
   } catch(e) { toast(e.message, 'error'); }
 };
 
 loadData().catch(e => {
   document.getElementById('prof-list').innerHTML =
     `<div class="empty"><div class="empty-icon">⚠️</div><div class="empty-text">Cannot connect to API</div></div>`;
+  // Əgər server ilə əlaqə qurulmazsa, xəta mesajı göstəririk
   document.getElementById('sub-list').innerHTML = '';
+  // Fənn siyahısını boş buraxırıq
 });
 </script>
 </body>

@@ -1,27 +1,48 @@
 <!DOCTYPE html>
+<!-- Brauzerə deyirik ki, bu müasir HTML5 faylıdır -->
+
 <html lang="az">
+<!-- Səhifənin dili Azərbaycan dili kimi təyin edilir -->
+
 <head>
   <meta charset="UTF-8" />
+  <!-- Azərbaycan hərfləri düzgün görünsün deyə UTF-8 seçirik -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Sayt mobil cihazlarda da normal görünsün deyə bu sətri yazırıq -->
+
   <title>Müəllim — ProfRate</title>
+  <!-- Brauzer tabında görünəcək başlıq — professor adı sonra JavaScript ilə dəyişdirilir -->
+
   <link rel="stylesheet" href="css/styles.css" />
+  <!-- Ümumi dizayn faylını bağlayırıq -->
 </head>
 <body>
 
 <nav class="nav">
+<!-- Yuxarıdakı naviqasiya paneli -->
+
   <a href="index.html" class="nav-logo">
+  <!-- Loqoya klik edəndə ana səhifəyə qayıdır -->
     <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8">
       <path d="M14 3L2 9l12 6 12-6-12-6z"/><path d="M2 9v8"/><path d="M7 11.5v6a9 9 0 0014 0v-6"/>
     </svg>
+    <!-- Akademik papaq ikonu -->
     ProfRate
   </a>
+
   <div class="nav-links">
     <a href="index.html">Ana Səhifə</a>
     <a href="search.html">Müəllimlər</a>
+    <!-- Naviqasiya keçid linkləri -->
   </div>
+
   <div class="nav-search-mini">
+  <!-- Naviqasiyada kiçik axtarış qutusu -->
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <!-- Böyüdücü şüşə ikonu -->
     <input id="nav-search-input" type="text" placeholder="Axtar…" />
+    <!-- Sürətli axtarış üçün sahə -->
   </div>
 </nav>
 
@@ -29,56 +50,87 @@
   <div class="container">
 
     <div class="breadcrumb">
+    <!-- Yol göstəricisi — istifadəçi hansı səhifədə olduğunu görür -->
       <a href="index.html">Ana Səhifə</a>
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      <!-- Ox ikonu — breadcrumb ayırıcısı -->
       <a href="search.html">Müəllimlər</a>
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
       <span id="bc-name">Yüklənir…</span>
+      <!-- Professor adı buraya JavaScript ilə yazılır -->
     </div>
 
     <div id="profile-loading" class="loading"><div class="spinner"></div><span>Yüklənir…</span></div>
+    <!-- Məlumatlar gələnə qədər fırlanan yükləmə animasiyası -->
+
     <div id="profile-content" class="hidden"></div>
+    <!-- Professor məzmunu buraya JavaScript ilə doldurulur — əvvəlcə gizlidir -->
 
   </div>
 </main>
 
 <footer>
   <div class="container"><p>Tələbələr üçün ❤️ ilə hazırlandı · <strong>ProfRate</strong></p></div>
+  <!-- Səhifənin ən aşağısındakı footer yazısı -->
 </footer>
 
 <!-- Üzən Sosial Düymələr -->
+<!-- Səhifənin kənarında sabit dayanan WhatsApp və Instagram düymələri -->
 <div class="social-float">
   <a class="social-btn whatsapp" href="https://wa.me/994997771734" target="_blank" title="WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <!-- WhatsApp-ın rəsmi SVG loqosu -->
   </a>
   <a class="social-btn instagram" href="https://www.instagram.com/writerbai" target="_blank" title="Instagram">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    <!-- Instagram-ın rəsmi SVG loqosu -->
   </a>
 </div>
 
 <script src="js/shared.js"></script>
+<!-- Ortaq JavaScript funksiyalarını bağlayırıq -->
+
 <script>
 (async function() {
+  // Səhifə açılarkən dərhal işə düşən funksiya
+
   const id = new URLSearchParams(location.search).get('id');
+  // URL-dən professor ID-sini götürürük (məsələn: professor.html?id=3)
+
   if (!id) { location.href = 'search.html'; return; }
+  // Əgər ID yoxdursa, axtarış səhifəsinə yönləndiririk
 
   try {
     const prof = await api.getProfessor(id);
+    // Serverdən həmin ID-li professorun məlumatlarını gətiririk
+
     document.title = prof.full_name + ' — ProfRate';
+    // Brauzer tabının başlığını professorun adı ilə dəyişirik
+
     document.getElementById('bc-name').textContent = prof.full_name;
+    // Breadcrumb-da professorun adını göstəririk
+
     renderProfile(prof);
+    // Professorun bütün məlumatlarını səhifəyə çəkirik
   } catch(e) {
     document.getElementById('profile-loading').innerHTML =
       '<div class="empty"><div class="empty-icon">⚠️</div><div class="empty-text">' + e.message + '</div></div>';
+    // Xəta olarsa, xəta mesajı göstəririk
   }
 
   function renderProfile(prof) {
     document.getElementById('profile-loading').classList.add('hidden');
+    // Yükləmə animasiyasını gizledirik
+
     var content = document.getElementById('profile-content');
     content.classList.remove('hidden');
+    // Məzmun bölməsini görünən edirik
 
     var avg = Number(prof.avg_rating) || 0;
+    // Ortalama reytinqi rəqəmə çeviririk, yoxdursa 0 qəbul edirik
+
     var cnt = Number(prof.review_count) || 0;
+    // Şərh sayını rəqəmə çeviririk
 
     var subjectListHTML = '';
     if (prof.subjects && prof.subjects.length) {
@@ -87,35 +139,49 @@
           '<div><div class="sname">' + s.subject_name + '</div><div class="sdept">' + s.department + '</div></div>' +
           '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>' +
           '</div>';
+        // Hər fənn üçün kliklenebilir siyahı elementi yaradırıq
       });
     }
+    // Professorun tədris etdiyi fənnlər siyahısını HTML-ə çeviririk
 
     var photoHTML = prof.photo_url
       ? '<img src="' + prof.photo_url + '" style="width:80px;height:80px;border-radius:18px;object-fit:cover;border:1px solid var(--border);margin-bottom:20px" onerror="this.style.display=\'none\'" />'
       : '<div class="profile-avatar">' + initials(prof.full_name) + '</div>';
+    // Foto varsa şəkil göstəririk, yoxdursa baş hərflərdən ibarət avatar yaradırıq
 
     var metaExtra = '';
-    if (prof.position) metaExtra += '<div class="profile-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>' + prof.position + '</div>';
-    if (prof.academic_degree) metaExtra += '<div class="profile-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>' + prof.academic_degree + '</div>';
-    if (prof.email) metaExtra += '<div class="profile-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:' + prof.email + '" style="color:var(--gold)">' + prof.email + '</a></div>';
+    if (prof.position) metaExtra += '<div class="profile-meta-item">...' + prof.position + '</div>';
+    if (prof.academic_degree) metaExtra += '<div class="profile-meta-item">...' + prof.academic_degree + '</div>';
+    if (prof.email) metaExtra += '<div class="profile-meta-item">...<a href="mailto:' + prof.email + '">' + prof.email + '</a></div>';
+    // Əgər professor üçün vəzifə, elmi dərəcə və ya email varsa, bunları da göstəririk
 
     content.innerHTML =
       '<div class="profile-hero">' +
         '<div>' +
           photoHTML +
+          // Professor şəkli və ya baş hərflər avatarı
           '<h1 class="profile-name">' + prof.full_name + '</h1>' +
+          // Professorun tam adı böyük başlıq kimi
           '<div class="profile-meta">' +
-            '<div class="profile-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>' + prof.university + '</div>' +
-            '<div class="profile-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="m8 21 4-4 4 4"/></svg>' + prof.faculty + '</div>' +
+            '<div class="profile-meta-item">...' + prof.university + '</div>' +
+            // Universitet adı
+            '<div class="profile-meta-item">...' + prof.faculty + '</div>' +
+            // Fakültə adı
             metaExtra +
-            '<div class="profile-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Əlavə edilib: ' + fmtDate(prof.created_at) + '</div>' +
+            // Vəzifə, elmi dərəcə, email (varsa)
+            '<div class="profile-meta-item">...Əlavə edilib: ' + fmtDate(prof.created_at) + '</div>' +
+            // Sistemə əlavə edilmə tarixi
           '</div>' +
           '<p class="profile-bio">' + (prof.biography || 'Bioqrafiya məlumatı yoxdur.') + '</p>' +
+          // Professorun bioqrafiyası — yoxdursa standart mətn göstərilir
         '</div>' +
         '<div class="profile-rating-box">' +
           '<div class="rating-big">' + avg.toFixed(1) + '</div>' +
+          // Böyük reytinq rəqəmi — məsələn: 4.7
           '<div class="rating-stars-big">' + starsHTML(avg) + '</div>' +
+          // Ulduz şəklində reytinq
           '<div class="rating-total">' + cnt + ' şərh</div>' +
+          // Ümumi şərh sayı
         '</div>' +
       '</div>' +
 
@@ -123,50 +189,59 @@
         '<div>' +
           '<div class="profile-card">' +
             '<div class="profile-card-title">Tələbə Şərhləri</div>' +
-            '<div id="reviews-list">' + (cnt > 0 ? renderReviews(prof.reviews || []) : '<div class="empty" style="padding:20px 0"><div class="empty-icon">💬</div><div class="empty-text">Hələ şərh yoxdur. İlk siz yazın!</div></div>') + '</div>' +
+            // Şərhlər bölməsinin başlığı
+            '<div id="reviews-list">' + (cnt > 0 ? renderReviews(prof.reviews || []) : '<div class="empty">...İlk siz yazın!</div>') + '</div>' +
+            // Şərhlər varsa göstərir, yoxdursa "ilk siz yazın" mesajı
           '</div>' +
         '</div>' +
 
         '<div>' +
           '<div class="profile-card">' +
             '<div class="profile-card-title">Tədris Etdiyi Fənlər</div>' +
-            (subjectListHTML || '<div class="text-muted" style="font-size:.875rem">Fənn təyin edilməyib</div>') +
+            (subjectListHTML || '<div class="text-muted">Fənn təyin edilməyib</div>') +
+            // Fənnlər varsa göstərir, yoxdursa "təyin edilməyib" yazır
           '</div>' +
 
           '<div class="profile-card">' +
             '<div class="profile-card-title">Şərh Yaz</div>' +
             '<div class="review-form">' +
-              '<div>' +
-                '<div class="form-label" style="margin-bottom:8px">Adınız *</div>' +
-                '<input class="form-input" id="review-name" placeholder="Ad Soyad" />' +
-              '</div>' +
-              '<div>' +
-                '<div class="form-label" style="margin-bottom:8px">Reytinq *</div>' +
-                '<div class="star-picker" id="star-picker">' +
-                  '<button class="star-btn" data-val="1" onclick="pickStar(1)">★</button>' +
-                  '<button class="star-btn" data-val="2" onclick="pickStar(2)">★</button>' +
-                  '<button class="star-btn" data-val="3" onclick="pickStar(3)">★</button>' +
-                  '<button class="star-btn" data-val="4" onclick="pickStar(4)">★</button>' +
-                  '<button class="star-btn" data-val="5" onclick="pickStar(5)">★</button>' +
-                '</div>' +
-              '</div>' +
-              '<div>' +
-                '<div class="form-label" style="margin-bottom:8px">Şərhiniz</div>' +
-                '<textarea class="review-input" id="review-comment" placeholder="Bu müəllim haqqında fikirlərinizi yazın…"></textarea>' +
-              '</div>' +
+              // Şərh yazma formu
+              '<div><div class="form-label">Adınız *</div>' +
+              '<input class="form-input" id="review-name" placeholder="Ad Soyad" /></div>' +
+              // Ad sahəsi — mütləq doldurulmalıdır
+
+              '<div><div class="form-label">Reytinq *</div>' +
+              '<div class="star-picker" id="star-picker">' +
+                '<button class="star-btn" data-val="1" onclick="pickStar(1)">★</button>' +
+                '<button class="star-btn" data-val="2" onclick="pickStar(2)">★</button>' +
+                '<button class="star-btn" data-val="3" onclick="pickStar(3)">★</button>' +
+                '<button class="star-btn" data-val="4" onclick="pickStar(4)">★</button>' +
+                '<button class="star-btn" data-val="5" onclick="pickStar(5)">★</button>' +
+              '</div></div>' +
+              // 1-dən 5-ə qədər ulduz seçimi — hər ulduz bir düymədir
+
+              '<div><div class="form-label">Şərhiniz</div>' +
+              '<textarea class="review-input" id="review-comment" placeholder="Bu müəllim haqqında fikirlərinizi yazın…"></textarea></div>' +
+              // Şərh mətni üçün çox sətirli sahə
+
               '<button class="submit-btn" id="submit-review-btn" onclick="submitReview(' + prof.id + ')">Şərh Yaz</button>' +
+              // Göndər düyməsi — klik edəndə submitReview() işə düşür
             '</div>' +
           '</div>' +
         '</div>' +
       '</div>';
 
     window._selectedRating = 0;
+    // Seçilmiş reytinqi sıfırlayırıq
   }
 
   window.pickStar = function(n) {
     window._selectedRating = n;
+    // Seçilmiş ulduz sayını yadda saxlayırıq
+
     document.querySelectorAll('.star-btn').forEach(function(b) {
       b.classList.toggle('active', Number(b.dataset.val) <= n);
+      // Seçilmiş ulduza qədər olanları "active" edirik ki, sarı rəng alsın
     });
   };
 
@@ -175,50 +250,68 @@
     var name    = document.getElementById('review-name').value.trim();
     var comment = document.getElementById('review-comment').value.trim();
     var rating  = window._selectedRating;
+    // Formdakı bütün məlumatları oxuyuruq
 
     if (!name)   { toast('Zəhmət olmasa adınızı yazın', 'error'); return; }
     if (!rating) { toast('Zəhmət olmasa reytinq seçin', 'error'); return; }
+    // Məcburi sahələr boşdursa, xəta bildirişi göstəririk
 
     btn.disabled = true;
     btn.textContent = 'Göndərilir…';
+    // Düyməni deaktiv edirik ki, iki dəfə basılmasın
 
     try {
       var res = await api.postReview({ professor_id: profId, rating: rating, comment: comment, reviewer_name: name });
+      // Şərhi serverə göndəririk
+
       toast('Şərhiniz göndərildi! Təşəkkür edirik.', 'success');
+      // Uğurlu olduqda yaşıl bildiriş göstəririk
 
       var reviews = await api.getReviews(profId);
       document.getElementById('reviews-list').innerHTML = renderReviews(reviews);
+      // Yeni şərhlər siyahısını yeniləyirik
 
       window._selectedRating = 0;
       document.querySelectorAll('.star-btn').forEach(function(b) { b.classList.remove('active'); });
       document.getElementById('review-comment').value = '';
       document.getElementById('review-name').value = '';
+      // Formu sıfırlayırıq
 
       document.querySelector('.rating-big').textContent = Number(res.avg_rating).toFixed(1);
       document.querySelector('.rating-stars-big').textContent = starsHTML(res.avg_rating);
       document.querySelector('.rating-total').textContent = res.review_count + ' şərh';
+      // Reytinq qutusu yeni ortalama ilə yenilənir
     } catch(e) {
       toast(e.message, 'error');
+      // Xəta olarsa bildiriş göstəririk
     } finally {
       btn.disabled = false;
       btn.textContent = 'Şərh Yaz';
+      // Xəta olsa da olmasa da düyməni yenidən aktiv edirik
     }
   };
 
   function renderReviews(reviews) {
-    if (!reviews.length) return '<div class="empty" style="padding:20px 0"><div class="empty-icon">💬</div><div class="empty-text">Hələ şərh yoxdur. İlk siz yazın!</div></div>';
+    if (!reviews.length) return '<div class="empty">...Hələ şərh yoxdur. İlk siz yazın!</div>';
+    // Şərh yoxdursa boş vəziyyət mesajı göstəririk
+
     return reviews.map(function(r) {
       return '<div class="review-item">' +
         '<div class="review-header">' +
-          '<span style="font-weight:600;font-size:.9rem">' + (r.reviewer_name || 'Anonim') + '</span>' +
+          '<span>' + (r.reviewer_name || 'Anonim') + '</span>' +
+          // Şərh yazanın adı — yoxdursa "Anonim" göstərilir
           '<span class="review-date">' + fmtDate(r.created_at) + '</span>' +
+          // Şərhin yazılma tarixi
         '</div>' +
-        '<div class="review-header" style="margin-top:4px;margin-bottom:6px">' +
-          '<span class="review-stars">' + starsHTML(r.rating) + ' <span style="color:var(--text-dim);font-size:.8rem;margin-left:4px">' + r.rating + '/5</span></span>' +
+        '<div class="review-header">' +
+          '<span class="review-stars">' + starsHTML(r.rating) + ' ' + r.rating + '/5</span>' +
+          // Ulduz reytinqi və rəqəmsal bal
         '</div>' +
-        '<div class="review-comment">' + (r.comment || '<em style="opacity:.5">Şərh yazılmayıb</em>') + '</div>' +
+        '<div class="review-comment">' + (r.comment || '<em>Şərh yazılmayıb</em>') + '</div>' +
+        // Şərh mətni — yoxdursa "yazılmayıb" göstərilir
       '</div>';
     }).join('');
+    // Bütün şərhləri HTML-ə çevirib birləşdiririk
   }
 })();
 </script>
